@@ -1,0 +1,59 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('https://source.unsplash.com/1600x900/?christmas') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+#countdown {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+.day {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid #fff;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.day.locked {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    cursor: not-allowed;
+}
+
+.day:hover:not(.locked) {
+    transform: scale(1.1);
+    background: #f9c74f;
+}
